@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 import random
+
 number = random.randint(-10, 10)
+
 if number > 0:
-	string = "positive"
+    string = "positive"
 elif number == 0:
-	string = "zero"
+    string = "zero"
 else:
-	string = "negetive"
+    string = "negative"
+
 print(f"{number} is {string}")
