@@ -1,4 +1,4 @@
-#include <stddef.h>
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -8,46 +8,46 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow, *fast, *prev_slow, *mid;
-	int is_palindrome = 1;
+    listint_t *slow, *fast, *prev_slow, *mid;
+    int is_palindrome = 1;
 
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
+    if (*head == NULL || (*head)->next == NULL)
+        return (1);
 
-	/* Find the middle of the linked list */
-	slow = *head;
-	fast = *head;
-	while (fast != NULL && fast->next != NULL)
-	{
-		fast = fast->next->next;
-		prev_slow = slow;
-		slow = slow->next;
-	}
+    /* Find the middle of the linked list */
+    slow = *head;
+    fast = *head;
+    while (fast != NULL && fast->next != NULL)
+    {
+        fast = fast->next->next;
+        prev_slow = slow;
+        slow = slow->next;
+    }
 
-	/* Reverse the second half of the linked list */
-	mid = slow;
-	if (fast != NULL)
-		slow = slow->next;
-	prev_slow->next = NULL;
-	reverse_list(&slow);
+    /* Reverse the second half of the linked list */
+    mid = slow;
+    if (fast != NULL)
+        slow = slow->next;
+    prev_slow->next = NULL;
+    reverse_list(&slow);
 
-	/* Compare the first half and reversed second half */
-	while (*head != NULL && slow != NULL)
-	{
-		if ((*head)->n != slow->n)
-		{
-			is_palindrome = 0;
-			break;
-		}
-		*head = (*head)->next;
-		slow = slow->next;
-	}
+    /* Compare the first half and reversed second half */
+    while (*head != NULL && slow != NULL)
+    {
+        if ((*head)->n != slow->n)
+        {
+            is_palindrome = 0;
+            break;
+        }
+        *head = (*head)->next;
+        slow = slow->next;
+    }
 
-	/* Restore the original linked list */
-	reverse_list(&mid);
-	prev_slow->next = mid;
+    /* Restore the original linked list */
+    reverse_list(&mid);
+    prev_slow->next = mid;
 
-	return is_palindrome;
+    return is_palindrome;
 }
 
 /**
@@ -56,17 +56,17 @@ int is_palindrome(listint_t **head)
  */
 void reverse_list(listint_t **head)
 {
-	listint_t *prev = NULL;
-	listint_t *current = *head;
-	listint_t *next = NULL;
+    listint_t *prev = NULL;
+    listint_t *current = *head;
+    listint_t *next = NULL;
 
-	while (current != NULL)
-	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
-	}
+    while (current != NULL)
+    {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
 
-	*head = prev;
+    *head = prev;
 }
