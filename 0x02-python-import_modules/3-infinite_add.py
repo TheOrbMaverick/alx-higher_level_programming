@@ -1,11 +1,16 @@
 #!/usr/bin/python3
 from sys import argv
 
-# Skip the script name (argv[0]) and convert the rest to integers
-arguments = [int(arg) for arg in argv[1:]]
+if __name__ == "__main__":
+    # Extract command-line arguments (excluding script name)
+    args = argv[1:]
 
-# Calculate the sum of all arguments
-result = sum(arguments)
+    # Initialize the sum to 0
+    total_sum = 0
 
-# Print the result
-print(result)
+    # Iterate through each argument, cast to int, and add to the sum
+    for arg in args:
+        total_sum += int(arg)
+
+    # Print the result
+    print(total_sum)
