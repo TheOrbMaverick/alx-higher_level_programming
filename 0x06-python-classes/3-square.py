@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """
+    Module: This is the module for the class.
     This class defines a square.
 
     Attributes:
