@@ -8,6 +8,7 @@
         __size (int): The size of the square.
     """
 
+
 class Square:
     """
     This class defines a square.

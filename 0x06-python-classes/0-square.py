@@ -4,6 +4,7 @@
 A class of nothing.
 """
 
+
 class Square:
 
     """
