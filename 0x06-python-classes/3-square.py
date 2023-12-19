@@ -12,6 +12,7 @@
         area(): Calculates the area
     """
 
+
 class Square:
     """
     This class defines a square.
