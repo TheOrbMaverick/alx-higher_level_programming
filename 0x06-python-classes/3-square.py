@@ -1,5 +1,16 @@
 #!/usr/bin/python3
 
+"""
+    This class defines a square.
+
+    Attributes:
+        __size (int): The size of the square.
+
+    Methods:
+        __init__(size): Inititialize with size
+        area(): Calculates the area
+    """
+
 class Square:
     """
     This class defines a square.
