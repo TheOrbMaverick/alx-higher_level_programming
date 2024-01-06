@@ -5,10 +5,13 @@
 class Rectangle:
     """Rectangle class with private width and height attributes"""
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initialize the Rectangle with optional width and height"""
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -51,3 +54,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
+
+    def __repr__(self):
+        """Return a string representation of the Rectangle for recreation"""
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """Print a message when an instance of Rectangle is deleted"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
