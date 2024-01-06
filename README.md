@@ -1,1 +1,2 @@
-Python programming
+We are at Python!
+Yipee!
