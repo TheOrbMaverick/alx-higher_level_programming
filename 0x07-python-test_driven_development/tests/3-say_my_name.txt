@@ -1,0 +1,13 @@
+# Test case for say_my_name function
+
+>>> say_my_name("John", "Doe")
+My name is John Doe
+
+>>> say_my_name("Alice")
+My name is Alice
+
+>>> say_my_name("", "Smith")
+My name is  Smith  # Note: This test case includes leading and trailing spaces intentionally
+
+>>> say_my_name("Bob", "Johnson")
+My name is Bob Johnson

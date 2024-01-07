@@ -1,0 +1,16 @@
+# Test case for text_indentation function
+
+>>> text_indentation("This is a sentence. Another sentence? One more sentence: The end.")
+This is a sentence
+Another sentence
+One more sentence
+The end
+
+>>> text_indentation("Single line text.")
+Single line text.
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("Empty text.")
+Empty text.
