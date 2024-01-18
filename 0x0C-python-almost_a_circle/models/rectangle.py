@@ -6,9 +6,11 @@ This module defines the Rectangle class, which inherits from the Base class.
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """
-    The Rectangle class inherits from the Base class and represents a rectangle.
+    The Rectangle class inherits from the Base class
+    and represents a rectangle.
 
     Attributes:
     width (int): Width of the rectangle.
@@ -18,13 +20,21 @@ class Rectangle(Base):
     id (int): Identifier of the rectangle.
 
     Methods:
-    __init__(self, width, height, x=0, y=0, id=None): Constructor for the Rectangle class.
-        - Calls the super class with id, utilizing the logic of the __init__ method of the Base class.
-        - Assigns the provided arguments (width, height, x, y) to the corresponding attributes.
-    area(self): Public method that returns the area value of the Rectangle instance.
-    display(self): Public method that prints the Rectangle instance using the character #, taking into account x and y.
-    __str__(self): Overridden method that returns a string representation of the Rectangle.
-    update(self, *args, **kwargs): Public method that assigns no-keyword and keyword arguments to attributes.
+    __init__(self, width, height, x=0, y=0, id=None):
+        Constructor for the Rectangle class.
+        - Calls the super class with id, utilizing the
+        logic of the __init__ method of the Base class.
+        - Assigns the provided arguments (width, height, x, y)
+        to the corresponding attributes.
+    area(self): Public method that returns the area
+    value of the Rectangle instance.
+    display(self): Public method that prints the Rectangle
+    instance using the character,
+    # taking into account x and y.
+    __str__(self): Overridden method that returns a string
+    representation of the Rectangle.
+    update(self, *args, **kwargs): Public method that assigns no-keyword
+    and keyword arguments to attributes.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -34,11 +44,14 @@ class Rectangle(Base):
         Args:
         width (int): Width of the rectangle.
         height (int): Height of the rectangle.
-        x (int, optional): X-coordinate of the top-left corner of the rectangle (default is 0).
-        y (int, optional): Y-coordinate of the top-left corner of the rectangle (default is 0).
+        x (int, optional): X-coordinate of the top-left
+        corner of the rectangle (default is 0).
+
+        y (int, optional): Y-coordinate of the top-left
+        corner of the rectangle (default is 0).
         id (int, optional): Identifier of the rectangle (default is None).
         """
-        super().__init__(id)  # Calls the super class with id using the logic of the __init__ method of the Base class
+        super().__init__(id)  # Calls the super class with id using the logic.
         self.width = width
         self.height = height
         self.x = x
@@ -97,7 +110,8 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Print the Rectangle instance using the character #, taking into account x and y."""
+        """Print the Rectangle instance using the character #
+        taking into account x and y."""
         for _ in range(self.__y):
             print()
         for _ in range(self.__height):
@@ -105,11 +119,13 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return a string representation of the Rectangle."""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (f"[Rectangle] ({self.id}) "
+                f"{self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """
-        Update the attributes of the Rectangle with the provided no-keyword and keyword arguments.
+        Update the attributes of the Rectangle with the provided
+        no-keyword and keyword arguments.
 
         Args:
         *args: No-keyword arguments in the order id, width, height, x, y.
@@ -152,4 +168,8 @@ class Rectangle(Base):
         Returns:
         dict: A dictionary containing attribute-value pairs.
         """
-        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
+        return {'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y}
