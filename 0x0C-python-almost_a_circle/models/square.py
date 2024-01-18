@@ -18,7 +18,8 @@ class Square(Rectangle):
     id (int): Identifier of the square.
 
     Methods:
-    __init__(self, size, x=0, y=0, id=None): Constructor for the Square class.
+    __init__(self, size, x=0, y=0, id=None):
+    Constructor for the Square class.
         - Calls the super class with id, x, y, width, and height
         using the logic of the __init__ method of the Rectangle class.
         - Assigns the provided argument size to both
