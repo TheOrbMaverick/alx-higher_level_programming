@@ -6,12 +6,14 @@ This module defines the Base class, which is inherited by other classes.
 
 import json
 
+
 class Base:
     """
     The Base class is the base class for all other classes in this project.
 
     Attributes:
-    __nb_objects (int): A private class attribute to manage the id attribute in all classes.
+    __nb_objects (int): A private class attribute to
+    manage the id attribute in all classes.
     """
 
     __nb_objects = 0
@@ -84,13 +86,13 @@ class Base:
         Base: An instance with attributes set based on the provided dictionary.
         """
         if cls.__name__ == "Rectangle":
-            dummy_instance = cls(1, 1)  # Creating a "dummy" Rectangle instance with mandatory attributes (width, height)
+            dummy_instance = cls(1, 1)  # Creating a "dummy" Rectangle insta..
         elif cls.__name__ == "Square":
-            dummy_instance = cls(1)  # Creating a "dummy" Square instance with mandatory attribute (size)
+            dummy_instance = cls(1)  # Creating a "dummy" Square instance
         else:
             dummy_instance = cls()  # Creating a generic "dummy" instance
 
-        dummy_instance.update(**dictionary)  # Updating the "dummy" instance with real values from the dictionary
+        dummy_instance.update(**dictionary)  # Updating the "dummy" instance
         return dummy_instance
 
     @classmethod
@@ -110,11 +112,11 @@ class Base:
         except FileNotFoundError:
             return []
 
-
     @classmethod
     def draw(cls, list_rectangles, list_squares):
         """
-        Opens a window and draws all the Rectangles and Squares using Turtle graphics.
+        Opens a window and draws all the Rectangles
+        and Squares using Turtle graphics.
 
         Args:
         list_rectangles (list): A list of Rectangle instances.
