@@ -1,11 +1,6 @@
 import unittest
-import sys
-import os
 
-# Add the parent directory to the sys.path to access the 'models' package
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'models')))
-
-from base import Base  # Import the Base class from models/base.py
+from models.base import Base  # Import the Base class from models/base.py
 
 
 class TestBase(unittest.TestCase):
