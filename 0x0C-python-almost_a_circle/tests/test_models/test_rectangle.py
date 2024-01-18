@@ -1,5 +1,8 @@
+import io
 import unittest
+from unittest.mock import patch
 from models.rectangle import Rectangle
+
 
 class TestRectangle(unittest.TestCase):
 

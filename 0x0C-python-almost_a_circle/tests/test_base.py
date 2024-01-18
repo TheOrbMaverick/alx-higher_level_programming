@@ -1,3 +1,6 @@
+"""
+Tests for Base class
+"""
 import unittest
 
 from models.base import Base  # Import the Base class from models/base.py
