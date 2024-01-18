@@ -6,6 +6,7 @@ This module defines the Square class, which inherits from the Rectangle class.
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     The Square class inherits from the Rectangle class and represents a square.
@@ -18,13 +19,18 @@ class Square(Rectangle):
 
     Methods:
     __init__(self, size, x=0, y=0, id=None): Constructor for the Square class.
-        - Calls the super class with id, x, y, width, and height using the logic of the __init__ method of the Rectangle class.
-        - Assigns the provided argument size to both width and height attributes.
-    __str__(self): Overridden method that returns a string representation of the Square.
+        - Calls the super class with id, x, y, width, and height
+        using the logic of the __init__ method of the Rectangle class.
+        - Assigns the provided argument size to both
+        width and height attributes.
+    __str__(self): Overridden method that returns a string
+    representation of the Square.
     size(self): Getter method for the size attribute.
     size(self, value): Setter method for the size attribute.
-    update(self, *args, **kwargs): Public method that assigns no-keyword and keyword arguments to attributes.
-    to_dictionary(self): Public method that returns the dictionary representation of the Square.
+    update(self, *args, **kwargs): Public method that assigns
+    no-keyword and keyword arguments to attributes.
+    to_dictionary(self): Public method that returns the
+    dictionary representation of the Square.
     """
 
     def __init__(self, size, x=0, y=0, id=None):
@@ -33,11 +39,16 @@ class Square(Rectangle):
 
         Args:
         size (int): Size of the square.
-        x (int, optional): X-coordinate of the top-left corner of the square (default is 0).
-        y (int, optional): Y-coordinate of the top-left corner of the square (default is 0).
+
+        x (int, optional): X-coordinate of the top-left
+        corner of the square (default is 0).
+
+        y (int, optional): Y-coordinate of the top-left
+        corner of the square (default is 0).
+
         id (int, optional): Identifier of the square (default is None).
         """
-        super().__init__(size, size, x, y, id)  # Calls the super class with id, x, y, width, and height using the logic of the __init__ method of the Rectangle class
+        super().__init__(size, size, x, y, id)  # Calls the super class
 
     @property
     def size(self):
@@ -67,7 +78,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        Update the attributes of the Square with the provided no-keyword and keyword arguments.
+        Update the attributes of the Square with the provided
+        no-keyword and keyword arguments.
 
         Args:
         *args: No-keyword arguments in the order id, size, x, y.
