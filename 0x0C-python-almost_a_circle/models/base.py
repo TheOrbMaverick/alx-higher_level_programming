@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+"""
+This module defines the Base class, which is inherited by other classes.
+"""
+
 import json
 
 class Base:
