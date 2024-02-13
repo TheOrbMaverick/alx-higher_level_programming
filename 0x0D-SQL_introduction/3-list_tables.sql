@@ -3,8 +3,8 @@
 -- Check if the correct database name is provided
 -- Note: This script does not handle command-line arguments directly; the database name must be passed when executing the script using a shell command
 
--- Define the database name using a variable
-SET @database_name = 'mysql';
+-- Define a placeholder for the database name using a variable
+SET @database_name = '$$DATABASE_NAME$$';
 
 -- Query to list tables
 -- Retrieve table names from the information_schema.tables view
