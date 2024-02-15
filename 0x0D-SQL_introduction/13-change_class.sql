@@ -5,5 +5,5 @@
 -- cat remove_records.sql | mysql -hlocalhost -uroot -p hbtn_0c_0
 
 -- Remove all records with score <= 5
-DELETE FROM hbtn_0c_0.second_table
+DELETE FROM second_table
 WHERE score <= 5;
