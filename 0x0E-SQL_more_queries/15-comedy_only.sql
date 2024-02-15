@@ -4,7 +4,7 @@
 SELECT tv.title 
     FROM tv_shows AS tv
         INNER JOIN tv_show_genres AS shows 
-        ON shows.id = shows.show_id
+        ON tv.id = shows.show_id
 
     INNER JOIN tv_genres as gen
     ON gen.id = shows.genre_id
