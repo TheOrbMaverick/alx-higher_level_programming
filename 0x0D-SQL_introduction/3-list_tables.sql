@@ -2,6 +2,7 @@
 
 -- Check if the correct number of arguments is provided
 -- Usage: mysql -u <username> -p <password> -h <hostname> <database_name> < 3-list_tables.sql
+-- SET @db_name = '$$mysql$$';
 
 -- Query to list tables
 -- Retrieve table names from the information_schema.tables view
