@@ -2,7 +2,8 @@
 
 -- List all shows and their rating sum
 SELECT title, SUM(rate) AS rating_sum
-FROM tv_shows
-INNER JOIN tv_show_ratings ON title.id = tv_show_ratings.show_id
+    FROM tv_shows AS tvtitle
+        INNER JOIN tv_show_ratings AS rater
+        ON tvtitle.id = rater.show_id
 GROUP BY title
 ORDER BY rating_sum DESC;
