@@ -7,5 +7,5 @@
 
 -- List all records of second_table, displaying score and name, ordered by score
 SELECT score, name
-FROM hbtn_0c_0.second_table
+FROM second_table
 ORDER BY score DESC;
