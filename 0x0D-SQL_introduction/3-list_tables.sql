@@ -1,7 +1,13 @@
--- Script to list all tables of a specified database in MySQL server
+#!/bin/bash
 
--- Query to list tables
--- Retrieve table names from the information_schema.tables view
--- Filter by the specified database name
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <database_name>"
+    exit 1
+fi
 
-SELECT table_name FROM information_schema.tables WHERE table_schema = '$$DATABASE_NAME$$';
+# Assign the database name from the command-line argument
+database_name="$1"
+
+# MySQL command to list tables in the specified database
+mysql -e "USE $database_name; SHOW TABLES;"
