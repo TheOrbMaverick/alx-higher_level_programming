@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function factorial(n) {
+function factorial (n) {
   // Check if n is NaN or less than 0, return 1 for NaN and negative numbers
   if (isNaN(n) || n < 0) {
     return 1;
