@@ -4,4 +4,8 @@ function addMeMaybe (number, theFunction) {
   theFunction(number + 1);
 }
 
-module.exports = { addMeMaybe };
+function incr() {
+  this.value++;
+}
+
+module.exports = { addMeMaybe, incr };
