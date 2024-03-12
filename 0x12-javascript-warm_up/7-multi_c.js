@@ -7,6 +7,8 @@ if (Number.isInteger(num) && num > 0) {
   for (let i = 0; i < num; i++) {
     console.log('C is fun');
   }
+} else if (num === 0) {
+  return;
 } else {
   console.log('Missing number of occurrences');
 }
