@@ -8,7 +8,7 @@ if (Number.isInteger(num) && num > 0) {
     console.log('C is fun');
   }
 } else if (num < 0) {
-  return;
+  process.exit();
 } else {
   console.log('Missing number of occurrences');
 }
