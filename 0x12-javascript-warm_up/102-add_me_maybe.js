@@ -4,7 +4,7 @@ function addMeMaybe (number, theFunction) {
   theFunction(number + 1);
 }
 
-function incr() {
+function incr () {
   this.value++;
 }
 

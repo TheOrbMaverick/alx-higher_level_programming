@@ -5,11 +5,11 @@ const { addMeMaybe, incr } = require('./103-object_fct');
 const myObject = {
   type: 'object',
   value: 12,
-  incr: incr
+  incr
 };
 console.log(myObject);
 
-addMeMaybe(myObject.value, function(newVal) {
+addMeMaybe(myObject.value, function (newVal) {
   myObject.value = newVal;
 });
 
