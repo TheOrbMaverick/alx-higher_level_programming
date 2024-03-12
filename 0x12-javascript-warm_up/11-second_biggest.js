@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-function secondBiggest(numbers) {
+function secondBiggest (numbers) {
   const sortedNumbers = numbers.sort((a, b) => b - a); // Sort in descending order
   if (sortedNumbers.length < 2) {
     return 0;
