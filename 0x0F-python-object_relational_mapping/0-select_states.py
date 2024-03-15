@@ -8,8 +8,9 @@ Usage: ./0-select_states.py <username> <password> <database>
 import sys
 import MySQLdb
 
+
 def list_states(username, password, database):
-    
+
     """
     Connects to the MySQL database and lists all
     states in ascending order by ID.
@@ -47,6 +48,7 @@ def list_states(username, password, database):
             cursor.close()
         if db:
             db.close()
+
 
 if __name__ == '__main__':
 
