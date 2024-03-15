@@ -10,8 +10,10 @@ import MySQLdb
 
 
 def search_states(username, password, database, state_name):
+
     """
-    Connects to a MySQL database and searches for a state with the provided name.
+    Connects to a MySQL database and searches
+    for a state with the provided name.
 
     Args:
         username (str): MySQL username.
@@ -22,9 +24,11 @@ def search_states(username, password, database, state_name):
     Returns:
         None
     """
+
     try:
         # Connect to MySQL database
-        db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
+        db = MySQLdb.connect(host='localhost', port=3306,
+                             user=username, passwd=password, db=database)
         cursor = db.cursor()
 
         # Execute SQL query with user input
@@ -50,7 +54,8 @@ def search_states(username, password, database, state_name):
 if __name__ == '__main__':
     # Check if correct number of arguments is provided
     if len(sys.argv) != 5:
-        print(f"Usage: {sys.argv[0]} <username> <password> <database> <state_name>")
+        print(f"""Usage: {sys.argv[0]} <username>
+              <password> <database> <state_name>""")
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:]
