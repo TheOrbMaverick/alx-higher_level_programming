@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script to list all states with a name starting with 'N' from the database hbtn_0e_0_usa.
+Script to list all states with a name starting with
+'N' from the database hbtn_0e_0_usa.
 
 Usage:
 ./list_states.py <username> <password> <database>
@@ -22,9 +23,11 @@ Example:
 import sys
 import MySQLdb
 
+
 def list_states(username, password, database):
     """
-    Connects to the MySQL database and lists all states with a name starting with 'N' in ascending order by ID.
+    Connects to the MySQL database and lists all states with a name starting
+    with 'N' in ascending order by ID.
 
     Args:
         username (str): MySQL username.
@@ -36,11 +39,16 @@ def list_states(username, password, database):
     """
     try:
         # Connect to MySQL database
-        db = MySQLdb.connect(host='localhost', port=3306, user=username, passwd=password, db=database)
+        db = MySQLdb.connect(host='localhost',
+                             port=3306,
+                             user=username,
+                             passwd=password,
+                             db=database)
         cursor = db.cursor()
 
         # Execute SQL query to fetch states starting with 'N' and sorted by ID
-        query = "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+        query = """SELECT id, name FROM states
+                WHERE name LIKE 'N%' ORDER BY id ASC"""
         cursor.execute(query)
 
         # Fetch and display results
@@ -57,6 +65,7 @@ def list_states(username, password, database):
             cursor.close()
         if db:
             db.close()
+
 
 if __name__ == '__main__':
     # Check if correct number of arguments is provided
