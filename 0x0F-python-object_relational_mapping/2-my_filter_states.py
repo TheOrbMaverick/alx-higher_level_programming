@@ -32,7 +32,7 @@ def list_states(username, password, name, database):
 
         # Execute SQL query to fetch states sorted by ID
         query = 'SELECT * FROM states WHERE name = %s;'
-        cursor.execute(query (name,))
+        cursor.execute(query(name,))
 
         # Fetch and display results
         results = cursor.fetchall()
