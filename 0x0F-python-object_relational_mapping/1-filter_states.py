@@ -52,8 +52,7 @@ def list_states(username, password, database):
         cursor.execute(query)
 
         # Fetch and display results
-        results = set(row for row in cursor.fetchall())
-        
+        results = cursor.fetchall()
         for row in results:
             print(row)
 
