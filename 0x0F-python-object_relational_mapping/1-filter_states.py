@@ -47,8 +47,8 @@ def list_states(username, password, database):
         cursor = db.cursor()
 
         # Execute SQL query to fetch states starting with 'N' and sorted by ID
-        query = """SELECT id, name FROM states WHERE
-                name LIKE 'N%' GROUP BY name ORDER BY id ASC"""
+        query = """SELECT * FROM states WHERE name
+                LIKE BINARY 'N%' ORDER BY id ASC"""
         cursor.execute(query)
 
         # Fetch and display results
