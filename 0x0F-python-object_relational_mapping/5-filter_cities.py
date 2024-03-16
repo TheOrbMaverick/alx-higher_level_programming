@@ -62,6 +62,5 @@ if __name__ == '__main__':
               <password> <database> <state_name>""")
         sys.exit(1)
 
-    # Join all arguments starting from the fourth argument (inclusive) into a single string
-    username, password, database, state_name = sys.argv[1:4], ' '.join(sys.argv[4:])
+    username, password, database, state_name = sys.argv[1:]
     filter_cities(username, password, database, state_name)
