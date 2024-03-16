@@ -32,8 +32,8 @@ def search_states(username, password, database, state_name):
         cursor = db.cursor()
 
         # Execute SQL query with user input
-        query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-        cursor.execute(query, (state_name,))
+        query = (f"SELECT * FROM states WHERE name = {state_name} ORDER BY id ASC")
+        cursor.execute(query)
 
         # Fetch and display results
         results = cursor.fetchall()
