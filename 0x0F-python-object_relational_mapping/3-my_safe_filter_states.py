@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-Script to search for a state in the states table of hbtn_0e_0_usa (safe from MySQL injection).
+Script to search for a state in the states
+table of hbtn_0e_0_usa (safe from MySQL injection).
 
-Usage: ./3-my_safe_filter_states.py <username> <password> <database> <state_name>
+Usage: ./3-my_safe_filter_states.py <username>
+<password> <database> <state_name>
 """
 
 import sys
@@ -11,7 +13,8 @@ import MySQLdb
 
 def safe_search_states(username, password, database, state_name):
     """
-    Connects to a MySQL database and searches for a state with the provided name (safe from MySQL injection).
+    Connects to a MySQL database and searches for a state
+    with the provided name (safe from MySQL injection).
 
     Args:
         username (str): MySQL username.
@@ -51,7 +54,8 @@ def safe_search_states(username, password, database, state_name):
 if __name__ == '__main__':
     # Check if correct number of arguments is provided
     if len(sys.argv) != 5:
-        print(f"Usage: {sys.argv[0]} <username> <password> <database> <state_name>")
+        print(f"""Usage: {sys.argv[0]} <username>
+              <password> <database> <state_name>""")
         sys.exit(1)
 
     username, password, database, state_name = sys.argv[1:]
