@@ -6,6 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State, City
 
+
 def main(username, password, database):
     # Define the database connection string
     db_string = f"mysql://{username}:{password}@localhost:3306/{database}"
@@ -31,9 +32,10 @@ def main(username, password, database):
     # Commit the session to save changes to the database
     session.commit()
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python 100-relationship_states_cities.py <username> <password> <database>")
+        print("Usage: python file <username> <password> <database>")
         sys.exit(1)
 
     username, password, database = sys.argv[1:4]
