@@ -1,5 +1,19 @@
+#!/usr/bin/python3
+"""
+Module: find_peak
+Contains a function to find a peak in a list of unsorted integers
+"""
+
 def find_peak(list_of_numbers):
-    """Find a peak in a list of unsorted integers"""
+    """Find a peak in a list of unsorted integers.
+
+    Args:
+        list_of_numbers (list): List of unsorted integers.
+
+    Returns:
+        int: A peak element from the list, if found.
+             None if the list is empty.
+    """
 
     if not list_of_numbers:
         return None
