@@ -28,3 +28,8 @@ def find_peak(list_of_numbers):
             low = mid + 1
     
     return list_of_numbers[low]
+
+# Test the function
+if __name__ == "__main__":
+    test_list = [1, 2, 4, 6, 3]
+    print(find_peak(test_list))
