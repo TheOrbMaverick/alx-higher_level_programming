@@ -1,6 +1,3 @@
 #!/bin/bash
 # The script sends POST parameters email and subject with specified values
-url="$1"
-email="test@gmail.com"
-subject="I will always be here for PLD"
-curl -s -X POST "$url" -d "email=$email" -d "subject=$subject"
+curl -s -X POST "$1" -d "email=test@gmail.com" -d "subject=I will always be here for PLD"
