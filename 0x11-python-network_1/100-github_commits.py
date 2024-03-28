@@ -23,6 +23,7 @@ if __name__ == "__main__":
     try:
         response = requests.get(url)
         commits = response.json()[:10]
+        
         for commit in commits:
             sha = commit["sha"]
             author_name = commit['commit']['author']['name']
