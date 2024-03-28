@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """
-Takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter.
+Takes in a letter and sends a POST request to
+http://0.0.0.0:5000/search_user with the letter as a parameter.
 If no argument is given, sets q=""
-If the response body is properly JSON formatted and not empty, displays the id and name like this: [<id>] <name>
+If the response body is properly JSON formatted and
+not empty, displays the id and name like this: [<id>] <name>
 Otherwise:
 - Displays Not a valid JSON if the JSON is invalid
 - Displays No result if the JSON is empty

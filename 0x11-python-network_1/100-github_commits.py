@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This script fetches the 10 most recent commits of a GitHub repository by a specific user.
+This script fetches the 10 most recent commits of a
+GitHub repository by a specific user.
 Usage: ./100-github_commits.py <repository_name> <owner_name>
 Example: ./100-github_commits.py rails rails
 """
