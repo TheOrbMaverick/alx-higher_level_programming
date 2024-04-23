@@ -16,7 +16,6 @@ request(apiUrl, (error, response, body) => {
     console.error(`Failed to fetch movie details. Status code: ${response.statusCode}`);
     return;
   }
-
   const films = JSON.parse(body).results;
   let count = 0;
 
