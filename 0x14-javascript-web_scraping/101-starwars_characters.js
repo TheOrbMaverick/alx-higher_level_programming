@@ -6,7 +6,7 @@ const movieId = process.argv[2];
 const movieUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 // Function to fetch character details
-function fetchCharacter(characterUrl) {
+function fetchCharacter (characterUrl) {
   return new Promise((resolve, reject) => {
     request(characterUrl, (error, response, body) => {
       if (error) {
@@ -15,7 +15,7 @@ function fetchCharacter(characterUrl) {
       }
 
       if (response.statusCode !== 200) {
-        reject(`Failed to fetch character details. Status code: ${response.statusCode}`);
+        reject(new Error(`Failed to fetch character details. Status code: ${response.statusCode}`));
         return;
       }
 
