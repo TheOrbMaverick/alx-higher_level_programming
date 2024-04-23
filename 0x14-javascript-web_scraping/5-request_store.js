@@ -22,7 +22,5 @@ request(url, (error, response, body) => {
       console.error(err);
       return;
     }
-
-    console.log(`Contents of ${url} saved to ${filePath}`);
   });
 });
