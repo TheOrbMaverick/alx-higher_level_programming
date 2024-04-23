@@ -3,9 +3,9 @@
 const request = require('request');
 
 const apiUrl = process.argv[2];
-const characterID = 18;
+const characterId = 18;
 
-request(url, (error, response, body) => {
+request(apiUrl, (error, response, body) => {
 
   if (error) {
     console.error(error);
