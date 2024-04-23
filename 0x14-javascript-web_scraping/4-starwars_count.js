@@ -6,12 +6,10 @@ const apiUrl = process.argv[2];
 const characterId = 18;
 
 request(apiUrl, (error, response, body) => {
-
   if (error) {
     console.error(error);
     return;
   }
-
   if (response.statusCode !== 200) {
     console.error(`Failed to fetch movie details. Status code: ${response.statusCode}`);
     return;
